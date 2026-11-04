@@ -24,7 +24,7 @@ Nenhuma imagem foi instalada na partição `recovery`. Todos os testes foram fei
 | adb como root | Ok, ~17 s | Ok, ~45 s | Ok |
 | MTP no Windows | Ok | Ok | Ok |
 | Porcentagem e status da bateria | Ok | Ok | Ok |
-| `reboot bootloader` | Ok | **Vai para o Android** | Ok |
+| `reboot bootloader` | Ok | Ok | Ok |
 | Descriptografia da `/data` | Não | Não | Não |
 
 O 4.9 é a versão recomendada no momento.
@@ -40,7 +40,8 @@ Valem para todas as versões:
 - **A `/data` não monta.** A descriptografia não está ativa e os blobs de FDE não estão neste
   repositório. **Não use "Format Data"**, porque isso apaga os dados do aparelho.
 - **O uso real não foi testado:** backup, restauração, instalação de zip, microSD e USB OTG.
-- **`Reboot` → `Recovery` não foi testado** em nenhuma versão.
+- **`Reboot` → `Recovery` não foi testado até o fim** em nenhuma versão. O teste inicia o kernel gravado na partição
+  `recovery`, que pode gravar firmware de touch se for de outra origem. Confira esse kernel antes.
 - **Instalação permanente não foi testada.**
 - O ajuste de tela para o notch não foi feito (`TW_Y_OFFSET`).
 - Só um aparelho foi testado. O ASUS_A001D_2 e os painéis Boyi e Holitech não foram testados.
