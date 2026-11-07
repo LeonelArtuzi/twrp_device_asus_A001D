@@ -42,7 +42,6 @@ Valem para todas as versões:
 - **O uso real não foi testado:** backup, restauração, instalação de zip, microSD e USB OTG.
 - **`Reboot` → `Recovery` só foi testado com o 6.19 gravado na partição.** O teste inicia o kernel gravado na
   partição `recovery`, que pode gravar firmware de touch se for de outra origem. Confira esse kernel antes.
-- O ajuste de tela para o notch não foi feito (`TW_Y_OFFSET`).
 - Só um aparelho foi testado. O ASUS_A001D_2 e os painéis Boyi e Holitech não foram testados.
 
 Limitações específicas de cada kernel estão no `README.A001D.md` de cada um:

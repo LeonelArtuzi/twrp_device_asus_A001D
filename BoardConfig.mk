@@ -67,6 +67,9 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # Display: 1080x2280, notch at the top
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TW_THEME := portrait_hdpi
+# Stock notch is 27.06 dp tall (config_mainBuiltInDisplayCutout) at 480 dpi: 81.2 px
+TW_Y_OFFSET := 82
+TW_H_OFFSET := -82
 TW_DEFAULT_BRIGHTNESS := 120
 ifeq ($(A001D_KERNEL),6.19)
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/backlight/brightness"
