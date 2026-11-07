@@ -21,15 +21,18 @@ ele foi gravado na partição `recovery`, e o `Reboot` → `Recovery` voltou ao 
 |---|---|---|---|
 | Tela | Ok | Ok | Ok |
 | Touch | Ok, de primeira | Ok | Só depois de bloquear e desbloquear a tela |
-| adb como root | Ok, ~17 s | Ok, ~45 s | Ok |
+| adb como root | Ok, ~17 s | Ok, ~6 s | Ok |
 | MTP no Windows | Ok | Ok | Ok |
 | Porcentagem e status da bateria | Ok | Ok | Ok |
 | `reboot bootloader` | Ok | Ok | Ok |
+| `Reboot` → `Recovery` | Não testado | Ok | Não testado |
+| Carga no carregador de parede | ~0,1 A: não reconhece o carregador | ~1,1 A (5 V/2 A, bateria a 4,2 V) | Não testado |
 | Descriptografia da `/data` | Não | Não | Não |
 
 O 4.9 é a versão recomendada no momento.
 
-A tabela vem das imagens de 02/11/2026, com kernels compilados à parte. Os kernels 4.9 e 6.19 de agora usam a
+A tabela vem das imagens de 02/11/2026, com kernels compilados à parte. A coluna do 6.19 foi atualizada em 07/11/2026,
+com a imagem gerada da fonte. Os kernels 4.9 e 6.19 de agora usam a
 mesma fonte e a mesma config. **O 3.18 agora é compilado da fonte (3.18.140) e nunca foi testado no aparelho**,
 e a coluna acima descreve o binário stock (3.18.120), que não é mais usado.
 
