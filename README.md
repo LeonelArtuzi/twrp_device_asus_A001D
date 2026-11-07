@@ -14,8 +14,8 @@ O `twrp-11` foi escolhido porque o `android-12.1` removeu o suporte a FDE, que e
 
 ## Estado
 
-Nenhuma imagem foi instalada na partição `recovery`. Todos os testes foram feitos com
-`fastboot boot`, em um único ASUS_A001D_1 com painel TCL.
+Os testes foram feitos com `fastboot boot`, em um único ASUS_A001D_1 com painel TCL. A exceção é o 6.19: em 07/11/2026
+ele foi gravado na partição `recovery`, e o `Reboot` → `Recovery` voltou ao TWRP em ~19 s.
 
 | | 4.9.227 | 6.19.5 | 3.18 stock (binário anterior) |
 |---|---|---|---|
@@ -40,9 +40,8 @@ Valem para todas as versões:
 - **A `/data` não monta.** A descriptografia não está ativa e os blobs de FDE não estão neste
   repositório. **Não use "Format Data"**, porque isso apaga os dados do aparelho.
 - **O uso real não foi testado:** backup, restauração, instalação de zip, microSD e USB OTG.
-- **`Reboot` → `Recovery` não foi testado até o fim** em nenhuma versão. O teste inicia o kernel gravado na partição
-  `recovery`, que pode gravar firmware de touch se for de outra origem. Confira esse kernel antes.
-- **Instalação permanente não foi testada.**
+- **`Reboot` → `Recovery` só foi testado com o 6.19 gravado na partição.** O teste inicia o kernel gravado na
+  partição `recovery`, que pode gravar firmware de touch se for de outra origem. Confira esse kernel antes.
 - O ajuste de tela para o notch não foi feito (`TW_Y_OFFSET`).
 - Só um aparelho foi testado. O ASUS_A001D_2 e os painéis Boyi e Holitech não foram testados.
 
